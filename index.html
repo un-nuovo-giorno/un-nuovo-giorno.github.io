@@ -23,6 +23,7 @@
             --white: #ffffff;
             --text-dark: #2d3748;
             --text-light: #718096;
+            --amazon-color: #FF9900;
         }
 
         html {
@@ -203,12 +204,24 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            text-align: center;
         }
 
         .btn:hover {
             background: var(--warm-gold);
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(246, 173, 85, 0.4);
+        }
+
+        .btn-amazon {
+            background: var(--amazon-color);
+            color: #111;
+        }
+
+        .btn-amazon:hover {
+            background: #ffaa33;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.4);
         }
 
         .btn-outline {
@@ -220,6 +233,12 @@
         .btn-outline:hover {
             background: var(--white);
             color: var(--primary-color);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .hero-image {
@@ -520,6 +539,49 @@
             margin-top: 0.5rem;
         }
 
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--amazon-color), #ffaa33);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 1rem;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: #111;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
@@ -702,6 +764,11 @@
                 margin-left: 0;
                 margin-top: 1rem;
             }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -762,12 +829,13 @@
                     per non arrendersi mai.
                 </p>
                 <div class="hero-buttons">
+                    <a href="https://amzn.eu/d/02U5Dmoz" target="_blank" class="btn btn-amazon">🛒 Acquista su Amazon</a>
                     <a href="#libro" class="btn">Scopri di Più</a>
                     <a href="#contatti" class="btn btn-outline">Contatta l'Autore</a>
                 </div>
             </div>
             <div class="hero-image fade-in">
-                <img src="https://image.qwenlm.ai/public_source/19f4eeb2-18d9-4495-88bd-6e75fc5255b3/10fec32f5-0a57-4127-bdd1-cda8e3c0780b.png" alt="Copertina del libro Un Nuovo Giorno" class="book-cover">
+                <img src="https://image.qwenlm.ai/public_source/19f4eeb2-18d9-4495-88bd-6e75fc5255b3/16721107f-695f-41ef-ac7f-24aefabce8c9.png" alt="Copertina del libro Un Nuovo Giorno" class="book-cover">
             </div>
         </div>
     </section>
@@ -784,7 +852,6 @@
                     <h3>Davide Ferrero</h3>
                     <ul class="author-details">
                         <li>Età: 41 anni</li>
-                        <li>Segni particolari: non sembra ma a volte sono anche simpatico</li>
                         <li>Promotore del potere di autoguarigione</li>
                         <li>Viaggiatore interiore</li>
                     </ul>
@@ -857,6 +924,10 @@
                         della felicità.
                     </p>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://amzn.eu/d/02U5Dmoz" target="_blank" class="btn btn-amazon fade-in">🛒 Acquista Ora su Amazon</a>
             </div>
         </div>
     </section>
@@ -971,6 +1042,17 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2 class="cta-title">Inizia il Tuo Viaggio Oggi</h2>
+            <p class="cta-text">
+                Scopri la storia di Davide e trova ispirazione per trasformare le tue difficoltà in opportunità di crescita.
+            </p>
+            <a href="https://amzn.eu/d/02U5Dmoz" target="_blank" class="cta-btn">🛒 Acquista su Amazon</a>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contatti">
         <div class="section-container">
@@ -979,19 +1061,19 @@
             
             <div class="contact-grid">
                 <div class="contact-card fade-in">
-                    <div class="contact-icon">📱</div>
-                    <h4>Telefono</h4>
-                    <p><a href="tel:+393393614531">339-3614531</a></p>
-                </div>
-                <div class="contact-card fade-in">
                     <div class="contact-icon">✉️</div>
                     <h4>Email</h4>
-                    <p><a href="mailto:ferrero.davide@gmail.com">ferrero.davide@gmail.com</a></p>
+                    <p><a href="mailto:1nuovogiorno@gmail.com">1nuovogiorno@gmail.com</a></p>
                 </div>
                 <div class="contact-card fade-in">
                     <div class="contact-icon">📍</div>
                     <h4>Disponibilità</h4>
                     <p>Presentazioni, incontri e conferenze su richiesta</p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">🌐</div>
+                    <h4>Social Media</h4>
+                    <p>Segui Davide sui suoi canali ufficiali</p>
                 </div>
             </div>
         </div>
@@ -1006,10 +1088,10 @@
                 di Davide Ferrero
             </p>
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="LinkedIn">💼</a>
-                <a href="mailto:ferrero.davide@gmail.com" title="Email">✉️</a>
+                <a href="https://www.youtube.com/@daveferry82" target="_blank" title="YouTube">▶️</a>
+                <a href="https://www.facebook.com/share/1FaD3p2ScH/?mibextid=wwXIfr" target="_blank" title="Facebook">📘</a>
+                <a href="https://www.instagram.com/davide.ferrero.official?igsh=dXk3eTh3am8xMnRk&utm_source=qr" target="_blank" title="Instagram">📷</a>
+                <a href="mailto:1nuovogiorno@gmail.com" title="Email">✉️</a>
             </div>
             <p class="copyright">
                 © 2024 Davide Ferrero. Tutti i diritti riservati.
